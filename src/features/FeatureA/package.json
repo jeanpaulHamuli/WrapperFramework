@@ -1,0 +1,22 @@
+{
+  "name": "feature-a",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "build": "vue-tsc && vite build",
+    "publish": "npm publish --access public"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "vue-tsc": "^1.0.0"
+  }
+}
