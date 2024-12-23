@@ -1,0 +1,1 @@
+{"root":["./src/app.vue","./src/main.ts","./src/router.ts","./src/vite-env.d.ts","./src/components/helloworld.vue","./src/features/featurea/src/featurea.vue","./src/features/featurea/src/index.ts","./src/features/featureb/src/featureb.vue","./src/features/featureb/src/index.ts","./src/utils/loadfeature.ts","./src/views/about.vue","./src/views/home.vue"],"version":"5.6.3"}

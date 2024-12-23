@@ -7,7 +7,6 @@
     </div>
     <div class="border-t mt-4"></div>
     <div class="mt-4" ref="featureContainer"></div>
-    <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
   </div>
 </template>
 
@@ -20,15 +19,13 @@ export default defineComponent({
   name: "Home",
   setup() {
     const featureContainer = ref<HTMLDivElement | null>(null);
-    const errorMessage = ref<string>("");
 
     const loadFeatureA = async () => {
       try {
         const FeatureA = await loadFeature("FeatureA");
         mountFeature(FeatureA);
-        errorMessage.value = ""; // Clear any previous errors
       } catch (error) {
-        errorMessage.value = error.message;
+        console.log(error);
       }
     };
 
@@ -36,9 +33,8 @@ export default defineComponent({
       try {
         const FeatureB = await loadFeature("FeatureB");
         mountFeature(FeatureB);
-        errorMessage.value = ""; // Clear any previous errors
       } catch (error) {
-        errorMessage.value = error.message;
+        console.log(error);
       }
     };
 
@@ -53,8 +49,7 @@ export default defineComponent({
     return {
       featureContainer,
       loadFeatureA,
-      loadFeatureB,
-      errorMessage
+      loadFeatureB
     };
   },
 });
