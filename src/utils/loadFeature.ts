@@ -1,10 +1,10 @@
-export async function loadFeature (featureName: string): Promise<any> {
+export const loadFeature = async (featureName: string) => {
     try {
-        const feature = await import(`../features/${featureName}/src/index`);
-        return feature.default;
+      const featureModule = await import(`../features/${featureName}/src/index.ts`);
+      return featureModule.default || featureModule;
     } catch (error) {
-        console.error(`Failed to load feature: ${featureName}`, error);
-        throw new Error(`Feature ${featureName} not found`);
+      console.error(`Error loading feature "${featureName}":`, error);
+      throw new Error(`Feature "${featureName}" could not be loaded.`);
     }
-}
+};
   

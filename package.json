@@ -1,7 +1,7 @@
 {
   "name": "framework-wrapper-001",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,9 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "framework-wrapper-cli": "bin/index.ts"
+  },
   "dependencies": {
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
